@@ -30,6 +30,29 @@ getNewsListing(callback: any){
 
 }
 
+getNewsItem(id: number, callback: any){
+  let url = 'https://api.npoint.io/9b22cfe9d24dd0c8a222/News/' + id;
+  this.http.get(url)
+  .subscribe(responce => {
+    callback(responce);
+  })
+
+
+}
+
+
+getNewsCategory(callback: any){
+  let url = 'https://api.npoint.io/568b7d4f4a272de10d71';
+  this.http.get(url)
+  .subscribe(responce => {
+    callback(responce);
+  })
+
+}
+
+
+
+
 
 
 }
