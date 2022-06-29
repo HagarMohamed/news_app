@@ -10,6 +10,7 @@ import { ThingsWeDoComponent } from './view/things-we-do/things-we-do.component'
 import { LatestNewsComponent } from './view/latest-news/latest-news.component';
 import { FooterComponent } from './view/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
