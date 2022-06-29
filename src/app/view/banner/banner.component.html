@@ -1,1 +1,28 @@
-<p>banner works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="">
+            <div class="card"  *ngFor="let slide of slides">
+                <div class="card-header">
+                    Featured
+                  </div>
+                <div class="card-body">
+                   
+                    <img class="card-img-top" *ngIf="slide.itemUrl !=''" [src]="slide.itemUrl" alt="">
+                    <img class="card-img-top" *ngIf="slide.itemUrl==='' " src=" https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg" alt="">
+                    <div class="card-body">
+                      <h3 class="card-title">{{slide.title}}</h3>
+                      <h5 class="card-category">{{slide.category}}</h5>
+                      <p class="card-text">{{slide.brief}}</p>
+                      <a [href]="slide.videoUrl" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
