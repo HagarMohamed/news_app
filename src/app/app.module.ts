@@ -9,6 +9,8 @@ import { BannerComponent } from './view/banner/banner.component';
 import { ThingsWeDoComponent } from './view/things-we-do/things-we-do.component';
 import { LatestNewsComponent } from './view/latest-news/latest-news.component';
 import { FooterComponent } from './view/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { FooterComponent } from './view/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
