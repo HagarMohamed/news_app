@@ -4,18 +4,18 @@
     <div class="row">
         <div class="">
             <div class="card"  *ngFor="let slide of slides">
-                <div class="card-header">
-                    Featured
-                  </div>
-                <div class="card-body">
+                <div class="card-header" [style.backgroundColor]="'#'+slide.colorCode">
                    
+                  </div>
+                <div class="card-body bb" [style.borderColor]="'#'+slide.colorCode">
+                   <style ></style>
                     <img class="card-img-top" *ngIf="slide.itemUrl !=''" [src]="slide.itemUrl" alt="">
                     <img class="card-img-top" *ngIf="slide.itemUrl==='' " src=" https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg" alt="">
                     <div class="card-body">
-                      <h3 class="card-title">{{slide.title}}</h3>
+                      <h4 class="card-title">{{slide.title}}</h4>
                       <h5 class="card-category">{{slide.category}}</h5>
                       <p class="card-text">{{slide.brief}}</p>
-                      <a [href]="slide.videoUrl" class="btn btn-primary">Go somewhere</a>
+                      <a [href]="slide.videoUrl" target="_blank" class="btn"  [style.borderColor]="'#'+slide.colorCode">Find out more</a>
                     </div>
                   </div>
     

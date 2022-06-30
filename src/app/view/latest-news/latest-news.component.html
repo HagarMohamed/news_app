@@ -1,1 +1,50 @@
-<p>latest-news works!</p>
+<div class="news_container">
+
+    <div id="cat_row" class="row">
+
+
+        <ul class="list-group" *ngFor="let category of categories">
+            <li class="list-group-item" [class.active]="isSelected == category.id" 
+            (click)="selected(category.id)">{{category.name}}</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!--Section: News of the day-->
+<div class="row news" *ngFor="let new_item of selectedNews">
+    <div class="col-md-4">
+        <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+            <img [src]="new_item.urlToImage"  class="img-fluid" />
+            <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">News of the day</span>
+        <!-- <span>{{new_item.categoryID}}</span> -->
+        <h4><a href="#">{{new_item.title}}</a></h4>
+        <p class="text-muted">
+            <span class="date">{{new_item.publishedDate}}</span>
+        </p>
+        <button type="button" class="btn btn-outline-primary">
+            <i class="fa fa-heart"></i>
+            &nbsp;&nbsp;<span>Add to favourit</span>
+        </button>
+            
+            <button type="button" class="btn btn-outline-primary">
+                <i class="fa fa-share"></i>
+                &nbsp;&nbsp;<span>Share</span>
+            </button>
+
+    </div>
+
+</div>
+
+
+<!--Section: News of the day-->
