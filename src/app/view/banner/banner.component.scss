@@ -1,0 +1,29 @@
+.card{
+    display: inline-block;
+    width: 300px;
+    margin-left: 40px;
+}
+.card:hover{
+    // box-shadow: 8px 8px 8px blue;
+    // transform:scale(1.1);
+    // transition: transform 0.2s ease;
+}
+.card-title {
+    display: inline-block;
+    width: 205px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+p{
+    display: inline-block;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis; 
+}
+
+.card-body.bb{
+    border: 1px solid;
+}
