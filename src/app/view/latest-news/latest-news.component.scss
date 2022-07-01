@@ -10,10 +10,13 @@
 }
 
 .list-group li:hover{
-    background-color: lightblue;
     cursor: pointer;
 }
-
+h3{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+}
 .news{
     margin-top: 50px;
     background-color: #fbfbfb;
@@ -26,11 +29,16 @@
     width: 300px;
     border-radius: 15px;
 }
+span.badge{
+    color: #fff;
+}
+u{
+    cursor: pointer;
+}
 .date{
     position: absolute;
     right: 0;
     bottom: 2px;
-    color: blue;
 }
 button{
     margin-left: 10px;

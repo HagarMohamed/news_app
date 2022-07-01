@@ -11,6 +11,7 @@ import { LatestNewsComponent } from './view/latest-news/latest-news.component';
 import { FooterComponent } from './view/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewsDetailsComponent } from './view/news-details/news-details.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BannerComponent,
     ThingsWeDoComponent,
     LatestNewsComponent,
-    FooterComponent
+    FooterComponent,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@
 
 
 <!--Section: News of the day-->
+<h3>Latest news </h3>
 <div class="row news" *ngFor="let new_item of selectedNews">
     <div class="col-md-4">
         <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
@@ -26,11 +27,11 @@
     </div>
 
     <div class="col-md-8">
-        <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">News of the day</span>
+        <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">{{getCategoryName(new_item.categoryID)}}</span>
         <!-- <span>{{new_item.categoryID}}</span> -->
-        <h4><a href="#">{{new_item.title}}</a></h4>
+        <h4><u (click)="viewNewItem(new_item.id, new_item.categoryID)">{{new_item.title}}</u></h4>
         <p class="text-muted">
-            <span class="date">{{new_item.publishedDate}}</span>
+            <u class="date">{{new_item.publishedDate}}</u>
         </p>
         <button type="button" class="btn btn-outline-primary">
             <i class="fa fa-heart"></i>

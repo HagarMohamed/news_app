@@ -3,14 +3,14 @@
 <div class="container">
     <div class="row">
         <div class="">
+            <h3>Highlight Banner</h3>
             <div class="card"  *ngFor="let slide of slides">
                 <div class="card-header" [style.backgroundColor]="'#'+slide.colorCode">
                    
                   </div>
                 <div class="card-body bb" [style.borderColor]="'#'+slide.colorCode">
                    <style ></style>
-                    <img class="card-img-top" *ngIf="slide.itemUrl !=''" [src]="slide.itemUrl" alt="">
-                    <img class="card-img-top" *ngIf="slide.itemUrl==='' " src=" https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg" alt="">
+                    <img class="card-img-top"  [src]="slide.itemUrl !='' ? slide.itemUrl :'https://www.pulsecarshalton.co.uk/wp-content/uploads/2016/08/jk-placeholder-image.jpg'" alt="">
                     <div class="card-body">
                       <h4 class="card-title">{{slide.title}}</h4>
                       <h5 class="card-category">{{slide.category}}</h5>

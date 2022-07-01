@@ -1,36 +1,62 @@
-
-  <nav class="navbar navbar-expand-lg mb-3 input-group">
+<nav class="navbar is-fixed-bottom is-transparent navbar-expand-lg mb-3 input-group">
     <div class="container-fluid">
-      <!-- <a class="navbar-brand" [routerLink]="'.'">Responsive navbar</a> -->
-      <img src="../../../assets/newspaper.png"/>
-  
-      <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
-      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-        &#9776;
-      </button>
-  
-      <!-- Step 2: Add the ngbCollapse directive to the element below. -->
-      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-        <ul class="navbar-nav input-group me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <!-- Step 4: Close the menu when a link is clicked. -->
-            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Examples</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">About</a>
-          </li>
-        </ul>
-        <div class="input-group mb-3">
-              <input type="search" placeholder="Search..." id="form1" class="form-control" />
-            <button type="button" class="btn btn-primary my-2 my-sm-0">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-      </div>
+        <!-- <a class="navbar-brand" [routerLink]="'.'">Responsive navbar</a> -->
+        <img src="../../../assets/newspaper.png" />
+
+        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+        </button>
+
+        <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav input-group me-auto mb-2 mb-lg-0">
+                <li class="nav-item active">
+                    <!-- Step 4: Close the menu when a link is clicked. -->
+                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Things We Do</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Latest News</a>
+                </li>
+            </ul>
+            <div class="input-group mb-3" style="width: 300px;">
+                <input type="search" placeholder="Search..." id="form1" class="form-control" />
+                <button type="button" class="btn btn-primary my-2 my-sm-0">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+           
+            <div>
+                <a class="btn lan" href="" role="button"><img src="../../../assets/united-kingdom.png" 
+
+                    alt="Black and White Portrait of a Man" loading="lazy" /></a>
+            </div>
+
+            <!-- Avatar -->
+            <div class="dropdown">
+                <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+                    role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35"
+                        alt="Black and White Portrait of a Man" loading="lazy" />
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                    <li>
+                        <a class="dropdown-item" href="#">My profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
     </div>
-  </nav>
-  
-  
+</nav>
