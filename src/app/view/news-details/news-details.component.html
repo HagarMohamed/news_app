@@ -1,0 +1,33 @@
+
+<div class="card px-3 pt-3">
+    <!-- News block -->
+    <div>
+      <!-- Featured image -->
+      <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4" data-mdb-ripple-color="light">
+        <img [src]="new_item.urlToImage" class="img-fluid" />
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+      </div>
+  
+      <!-- Article title and description -->
+      
+        <h4>{{cate_name}} News</h4>
+        <h5>{{new_item.title}}</h5>
+  
+        <p>
+         {{new_item.description}}
+        </p>
+      <p>
+        {{new_item.content}}
+      </p>
+ 
+  
+       <!-- Article data -->
+       <div class="row mb-3">
+        <div class=" text-end">
+          <u> {{new_item.publishedDate}}</u>
+        </div>
+      </div>
+  
+  </div>
