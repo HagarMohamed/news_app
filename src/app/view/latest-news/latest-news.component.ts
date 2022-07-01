@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { NewsServiceService } from 'src/app/service/news-service.service';
 
@@ -9,7 +10,7 @@ import { NewsServiceService } from 'src/app/service/news-service.service';
 })
 export class LatestNewsComponent implements OnInit {
 
-  constructor(private service: NewsServiceService) { }
+  constructor(private service: NewsServiceService, private router: Router) { }
 
   news: any = [];
   selectedNews: any =[];
@@ -50,6 +51,19 @@ export class LatestNewsComponent implements OnInit {
     
     
   }
+  viewNewItem(_id:number, cate_id: number){
+    this.router.navigate(['/news-details'], {queryParams: {
+      id : _id,
+      cat_name : this.getCategoryName(cate_id)
+    }
+  })
+   }
 
+   getCategoryName(cate_id : number):string{
+
+    let category = this.categories.find((cat_item: any) => cat_item.id == cate_id)
+    return category.name
+
+   }
 
 }
